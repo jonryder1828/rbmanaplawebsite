@@ -1,0 +1,1624 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2b057d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hide header when scrolling down */
+header.hide {
+    transform: translateY(-100%);
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically center the logo and text */
+    gap: 10px; /* Space between logo and text */
+}
+
+/* Logo Image */
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Logo Text */
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .logo-text {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+
+    header {
+        padding: 15px 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('rb.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+    background-color: #FFD700;
+    color: #2b057d;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #2b057d;
+    color: #FFD700;
+    transform: translateY(-5px);
+}
+
+/* Services Section */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+.services .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #2b057d;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.service-card ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 60px 20px;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+    background: #f5f5f5;
+}
+
+.faq-item h3 {
+    color: #2b057d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.faq-content.active {
+    display: block;
+}
+
+/* Loans Section */
+.loans-container {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+.loans-container .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.loan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 70px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.loan-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.loan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.loan-icon {
+    font-size: 40px;
+    color: #2b057d;
+    margin-bottom: 20px;
+}
+
+.loan-card h3 {
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.loan-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Loan Calculator */
+.loan-calculator {
+    padding: 60px 20px;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.calculator-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.calculator-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2b057d;
+}
+
+.calculator-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calculator-form button {
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.calculator-form button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2b057d;
+}
+
+/* Progress Bar */
+.progress-section {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.step {
+    background: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.step.completed {
+    background: #2b057d;
+    color: white;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.modal.active {
+    display: flex; /* Show modal when active */
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.modal-content h2 {
+    color: #2b057d;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    color: #2b057d;
+    margin-bottom: 10px;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #2b057d;
+    transition: color 0.3s ease-in-out;
+}
+
+.close:hover {
+    color: #FFD700;
+}
+
+.loans, .about-us, .testimonials, .contact-cta {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2b057d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #2b057d;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.loan-list, .service-list, .testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.loan-card, .service-card, .testimonial-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loan-card:hover, .service-card:hover, .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.loan-card h3, .service-card h3 {
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.loan-card p, .service-card p, .testimonial-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.loan-card ul, .service-card ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.loan-card ul li, .service-card ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+} 
+
+/* About Us Section */
+.about-us {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+.about-us .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.testimonial-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-icon {
+    font-size: 24px;
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-card .author {
+    font-size: 14px;
+    color: #2b057d;
+    font-weight: bold;
+}
+
+/* Contact CTA Section */
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+.contact .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2b057d;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    color: #2b057d;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #2b057d;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links h3 {
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #2b057d;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #FFD700;
+}
+
+/* Footer */
+footer {
+    background-color: #2b057d;
+    color: white;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #e0e0e0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #FFD700;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.footer-bottom a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .loans, .services, .about-us, .testimonials, .contact-cta {
+        padding: 50px 20px;
+    }
+
+    .loan-card, .service-card, .testimonial-card {
+        width: 100%;
+    }
+}
+
+/* Logo Styling */
+.logo img {
+    height: 30px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px; /* Smaller logo for mobile */
+    }
+}
+
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999; /* Ensure it's on top of everything */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#loading-screen.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #2b057d; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Loading Text */
+#loading-screen p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #2b057d;
+}
+
+/* Branch Locations */
+.branch-locations {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+.branch-locations h2 {
+    color: #2b057d;
+    margin-bottom: 20px;
+}
+
+/* Blog Section */
+.blog {
+    padding: 80px 20px;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.blog h2 {
+    color: #2b057d;
+    margin-bottom: 40px;
+}
+
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.blog-card h3 {
+    color: #2b057d;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.blog-card .cta-button {
+    background-color: #2b057d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.blog-card .cta-button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+/* Blog Post Styling */
+.blog-post {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.blog-post h1 {
+    color: #2b057d;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.blog-post .post-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.blog-post img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.blog-post .post-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.blog-post .post-content h3 {
+    color: #2b057d;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.blog-post .post-content p {
+    margin-bottom: 20px;
+}
+
+.blog-post .post-content ul,
+.blog-post .post-content ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.blog-post .post-content ul li,
+.blog-post .post-content ol li {
+    margin-bottom: 10px;
+}
+
+.blog-post .cta-button {
+    display: inline-block;
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.blog-post .cta-button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 40px 20px;
+    }
+
+    .blog-post h1 {
+        font-size: 28px;
+    }
+
+    .blog-post .post-content {
+        font-size: 14px;
+    }
+
+    .blog-post .post-content h3 {
+        font-size: 20px;
+    }
+}
+
+/* Currency Converter */
+.currency-converter {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.converter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.converter-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2b057d;
+}
+
+.converter-form input,
+.converter-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.converter-form button {
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.converter-form button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+#conversionResult {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2b057d;
+}
+
+/* Security Section */
+.security {
+    padding: 80px 20px;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.security h2 {
+    color: #2b057d;
+    margin-bottom: 20px;
+}
+
+.security p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.security-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #2b057d;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.security .cta-button {
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.security .cta-button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+/* Security Tips Section */
+.security-tips {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f9fafb;
+}
+
+.security-tips h1 {
+    color: #2b057d;
+    margin-bottom: 20px;
+}
+
+.security-tips .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.tips-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tip-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tip-card i {
+    font-size: 40px;
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.tip-card h3 {
+    color: #2b057d;
+    margin-bottom: 10px;
+}
+
+.tip-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.security-tips .cta-button {
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.security-tips .cta-button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+/* Privacy Policy Section */
+.privacy-policy {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.privacy-policy h1 {
+    color: #2b057d;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.privacy-policy h2 {
+    color: #2b057d;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.privacy-policy p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.privacy-policy ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.privacy-policy ul li {
+    margin-bottom: 10px;
+}
+
+.privacy-policy a {
+    color: #2b057d;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.privacy-policy a:hover {
+    color: #FFD700;
+}
+
+.privacy-policy .cta-button {
+    display: inline-block;
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.privacy-policy .cta-button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+/* Savings Section */
+.savings {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.savings h1 {
+    color: #2b057d;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.savings .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.savings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.savings-features h2,
+.savings-types h2,
+.how-to-open h2 {
+    color: #2b057d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.savings-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.savings-features ul li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.savings-features ul li i {
+    color: #2b057d;
+    margin-right: 10px;
+}
+
+.savings-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.account-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-card h3 {
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.account-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.account-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-card ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.how-to-open ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.how-to-open ol li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.how-to-open a {
+    color: #2b057d;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.how-to-open a:hover {
+    color: #FFD700;
+}
+
+.savings .cta-button {
+    display: inline-block;
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.savings .cta-button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}
+
+/* Credit Services Section */
+.credit-services {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.credit-services h1 {
+    color: #2b057d;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.credit-services .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.credit-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.credit-features h2,
+.credit-types h2,
+.how-to-apply h2 {
+    color: #2b057d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.credit-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.credit-features ul li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.credit-features ul li i {
+    color: #2b057d;
+    margin-right: 10px;
+}
+
+.credit-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.credit-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.credit-card h3 {
+    color: #2b057d;
+    margin-bottom: 15px;
+}
+
+.credit-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.credit-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.credit-card ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.how-to-apply ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.how-to-apply ol li {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.how-to-apply a {
+    color: #2b057d;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.how-to-apply a:hover {
+    color: #FFD700;
+}
+
+.credit-services .cta-button {
+    display: inline-block;
+    background-color: #2b057d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.credit-services .cta-button:hover {
+    background-color: #FFD700;
+    color: #2b057d;
+}

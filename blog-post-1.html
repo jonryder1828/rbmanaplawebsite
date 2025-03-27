@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Tips for Saving Money - Rural Bank of Manapla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id = "header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.png" alt="Rural Bank of Manapla Logo">
+            </div>
+            <div class="logo-text">Rural Bank of Manapla</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="loans.html">Loans</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-post">
+        <h1>5 Tips for Saving Money</h1>
+        <p class="post-date">Published on October 10, 2023</p>
+        <img src="bank-savings.png" alt="Savings Tips">
+        <div class="post-content">
+            <p>Saving money is an essential part of financial health. Whether you're saving for a big purchase, an emergency fund, or retirement, these tips can help you get started:</p>
+            <h3>1. Set a Budget</h3>
+            <p>Create a monthly budget to track your income and expenses. This will help you identify areas where you can cut back and save more.</p>
+            <h3>2. Automate Your Savings</h3>
+            <p>Set up automatic transfers to your savings account each month. This ensures you save consistently without having to think about it.</p>
+            <h3>3. Cut Unnecessary Expenses</h3>
+            <p>Review your spending habits and eliminate non-essential expenses, such as dining out or subscription services you don't use.</p>
+            <h3>4. Set Financial Goals</h3>
+            <p>Define clear financial goals, such as saving for a down payment or building an emergency fund. Having a goal will keep you motivated.</p>
+            <h3>5. Take Advantage of High-Interest Savings Accounts</h3>
+            <p>Open a high-interest savings account to maximize your savings. Rural Bank of Manapla offers competitive interest rates to help your money grow faster.</p>
+            <p>By following these tips, you can build a strong financial foundation and achieve your savings goals.</p>
+        </div>
+        <a href="index.html" class="cta-button">Back to Home</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Rural Bank of Manapla is committed to providing accessible and reliable financial services to empower our community.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Address: Crossing Ubos, Manapla, Philippines</p>
+                <p>Phone: (034) 491 0034</p>
+                <p>Email: rbmanaplainc@yahoo.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ruralbankofmanapla" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Bank of Manapla. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0; // Store the last scroll position
+        const header = document.getElementById("header");
+    
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset; // Get the current scroll position
+    
+            if (currentScroll <= 0) {
+                // At the top of the page, always show the header
+                header.classList.remove("hide");
+                return;
+            }
+    
+            if (currentScroll > lastScroll && !header.classList.contains("hide")) {
+                // Scrolling down: hide the header
+                header.classList.add("hide");
+            } else if (currentScroll < lastScroll && header.classList.contains("hide")) {
+                // Scrolling up: show the header
+                header.classList.remove("hide");
+            }
+    
+            lastScroll = currentScroll; // Update the last scroll position
+        });
+    </script>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+    <div class="loading-spinner"></div>
+    <p>Loading...</p>
+</div>
+
+</body>
+</html>

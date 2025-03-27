@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Credit Scores - Rural Bank of Manapla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id = "header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.png" alt="Rural Bank of Manapla Logo">
+            </div>
+            <div class="logo-text">Rural Bank of Manapla</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="loans.html">Loans</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-post">
+        <h1>Understanding Credit Scores</h1>
+        <p class="post-date">Published on October 15, 2023</p>
+        <img src="credit-scores.jpg" alt="Credit Scores">
+        <div class="post-content">
+            <p>Your credit score is a crucial factor in your financial health. It affects your ability to secure loans, credit cards, and even rent an apartment. Here's what you need to know:</p>
+            <h3>What is a Credit Score?</h3>
+            <p>A credit score is a three-digit number that represents your creditworthiness. It ranges from 300 to 850, with higher scores indicating better credit health.</p>
+            <h3>How is it Calculated?</h3>
+            <p>Credit scores are calculated based on several factors, including:</p>
+            <ul>
+                <li>Payment history (35%)</li>
+                <li>Credit utilization (30%)</li>
+                <li>Length of credit history (15%)</li>
+                <li>Types of credit (10%)</li>
+                <li>New credit inquiries (10%)</li>
+            </ul>
+            <h3>How to Improve Your Credit Score</h3>
+            <p>Here are some tips to boost your credit score:</p>
+            <ol>
+                <li>Pay your bills on time.</li>
+                <li>Keep your credit utilization below 30%.</li>
+                <li>Avoid opening too many new accounts at once.</li>
+                <li>Regularly check your credit report for errors.</li>
+            </ol>
+            <p>By understanding and managing your credit score, you can improve your financial opportunities.</p>
+        </div>
+        <a href="index.html" class="cta-button">Back to Home</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Rural Bank of Manapla is committed to providing accessible and reliable financial services to empower our community.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Address: 123 Main Street, Manapla, Philippines</p>
+                <p>Phone: +63 123 456 7890</p>
+                <p>Email: info@ruralbankmanapla.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Address: Crossing Ubos, Manapla, Philippines</p>
+                <p>Phone: (034) 491 0034</p>
+                <p>Email: rbmanaplainc@yahoo.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ruralbankofmanapla" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Bank of Manapla. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0; // Store the last scroll position
+        const header = document.getElementById("header");
+    
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset; // Get the current scroll position
+    
+            if (currentScroll <= 0) {
+                // At the top of the page, always show the header
+                header.classList.remove("hide");
+                return;
+            }
+    
+            if (currentScroll > lastScroll && !header.classList.contains("hide")) {
+                // Scrolling down: hide the header
+                header.classList.add("hide");
+            } else if (currentScroll < lastScroll && header.classList.contains("hide")) {
+                // Scrolling up: show the header
+                header.classList.remove("hide");
+            }
+    
+            lastScroll = currentScroll; // Update the last scroll position
+        });
+    </script>
+
+</body>
+</html>

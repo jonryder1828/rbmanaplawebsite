@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Services - Rural Bank of Manapla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id = "header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.png" alt="Rural Bank of Manapla Logo">
+            </div>
+            <div class="logo-text">Rural Bank of Manapla</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="loans.html">Loans</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="credit-services">
+        <h1>Credit Services</h1>
+        <p class="subheading">Access credit facilities tailored to your financial needs.</p>
+        <div class="credit-content">
+            <div class="credit-features">
+                <h2>Why Choose Our Credit Services?</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Low-interest rates for personal and business loans.</li>
+                    <li><i class="fas fa-check-circle"></i> Flexible repayment options to suit your budget.</li>
+                    <li><i class="fas fa-check-circle"></i> Quick and easy application process.</li>
+                    <li><i class="fas fa-check-circle"></i> Transparent terms and conditions.</li>
+                    <li><i class="fas fa-check-circle"></i> Dedicated customer support to guide you.</li>
+                </ul>
+            </div>
+            <div class="credit-types">
+                <h2>Types of Credit Services</h2>
+                <div class="credit-card">
+                    <h3>Personal Loans</h3>
+                    <p>Get the funds you need for personal expenses, such as medical bills, education, or travel.</p>
+                    <ul>
+                        <li>Loan amount: Up to ₱500,000</li>
+                        <li>Interest rate: 6% per annum</li>
+                        <li>Repayment term: 12 to 60 months</li>
+                    </ul>
+                </div>
+                <div class="credit-card">
+                    <h3>Business Loans</h3>
+                    <p>Finance your business expansion, equipment purchase, or working capital needs.</p>
+                    <ul>
+                        <li>Loan amount: Up to ₱5,000,000</li>
+                        <li>Interest rate: 7% per annum</li>
+                        <li>Repayment term: 12 to 120 months</li>
+                    </ul>
+                </div>
+                <div class="credit-card">
+                    <h3>Agricultural Loans</h3>
+                    <p>Support your farming or agribusiness with affordable credit options.</p>
+                    <ul>
+                        <li>Loan amount: Up to ₱1,000,000</li>
+                        <li>Interest rate: 5% per annum</li>
+                        <li>Repayment term: 6 to 36 months</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="how-to-apply">
+                <h2>How to Apply for Credit</h2>
+                <ol>
+                    <li>Visit any of our branches with the required documents.</li>
+                    <li>Fill out the loan application form.</li>
+                    <li>Submit proof of income, valid ID, and other necessary documents.</li>
+                    <li>Wait for approval and receive your funds.</li>
+                </ol>
+                <p>You can also start the process online by <a href="contact.html">contacting us</a>.</p>
+            </div>
+        </div>
+        <a href="contact.html" class="cta-button">Apply Now</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Rural Bank of Manapla is committed to providing accessible and reliable financial services to empower our community.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Address: Crossing Ubos, Manapla, Philippines</p>
+                <p>Phone: (034) 491 0034</p>
+                <p>Email: rbmanaplainc@yahoo.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ruralbankofmanapla" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Bank of Manapla. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0; // Store the last scroll position
+        const header = document.getElementById("header");
+    
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset; // Get the current scroll position
+    
+            if (currentScroll <= 0) {
+                // At the top of the page, always show the header
+                header.classList.remove("hide");
+                return;
+            }
+    
+            if (currentScroll > lastScroll && !header.classList.contains("hide")) {
+                // Scrolling down: hide the header
+                header.classList.add("hide");
+            } else if (currentScroll < lastScroll && header.classList.contains("hide")) {
+                // Scrolling up: show the header
+                header.classList.remove("hide");
+            }
+    
+            lastScroll = currentScroll; // Update the last scroll position
+        });
+    </script>
+
+
+</body>
+</html>

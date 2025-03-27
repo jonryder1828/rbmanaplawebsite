@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Tips - Rural Bank of Manapla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id = "header">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.png" alt="Rural Bank of Manapla Logo">
+            </div>
+            <div class="logo-text">Rural Bank of Manapla</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="loans.html">Loans</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="security-tips">
+        <h1>Security Tips</h1>
+        <p class="subheading">Protect your financial information and stay safe online with these security tips.</p>
+        <div class="tips-list">
+            <div class="tip-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Use Strong Passwords</h3>
+                <p>Create strong, unique passwords for your online accounts. Avoid using easily guessable information like birthdays or names.</p>
+            </div>
+            <div class="tip-card">
+                <i class="fas fa-lock"></i>
+                <h3>Enable Two-Factor Authentication</h3>
+                <p>Add an extra layer of security to your accounts by enabling two-factor authentication (2FA).</p>
+            </div>
+            <div class="tip-card">
+                <i class="fas fa-user-secret"></i>
+                <h3>Be Cautious of Phishing Scams</h3>
+                <p>Avoid clicking on suspicious links or providing personal information in response to unsolicited emails or messages.</p>
+            </div>
+            <div class="tip-card">
+                <i class="fas fa-wifi"></i>
+                <h3>Use Secure Networks</h3>
+                <p>Avoid accessing sensitive accounts or making transactions over public Wi-Fi. Use a virtual private network (VPN) for added security.</p>
+            </div>
+            <div class="tip-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Monitor Your Accounts</h3>
+                <p>Regularly check your bank and credit card statements for unauthorized transactions. Report any suspicious activity immediately.</p>
+            </div>
+            <div class="tip-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Keep Your Devices Updated</h3>
+                <p>Ensure your devices and apps are updated with the latest security patches to protect against vulnerabilities.</p>
+            </div>
+        </div>
+        <a href="index.html" class="cta-button">Back to Home</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Rural Bank of Manapla is committed to providing accessible and reliable financial services to empower our community.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="loans.html">Loans</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Address: Crossing Ubos, Manapla, Philippines</p>
+                <p>Phone: (034) 491 0034</p>
+                <p>Email: rbmanaplainc@yahoo.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ruralbankofmanapla" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Bank of Manapla. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        let lastScroll = 0; // Store the last scroll position
+        const header = document.getElementById("header");
+    
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset; // Get the current scroll position
+    
+            if (currentScroll <= 0) {
+                // At the top of the page, always show the header
+                header.classList.remove("hide");
+                return;
+            }
+    
+            if (currentScroll > lastScroll && !header.classList.contains("hide")) {
+                // Scrolling down: hide the header
+                header.classList.add("hide");
+            } else if (currentScroll < lastScroll && header.classList.contains("hide")) {
+                // Scrolling up: show the header
+                header.classList.remove("hide");
+            }
+    
+            lastScroll = currentScroll; // Update the last scroll position
+        });
+    </script>
+
+</body>
+</html>
